@@ -1,0 +1,15 @@
+---
+import Foods from '@components/Foods.astro'
+import Categories from '@components/Categories.astro'
+---
+
+<section class="grid grid-cols-3 mx-auto border-3 bg-amber-200 border-gray-200 rounded-lg px-22 py-4">
+  <Categories category="Principal" class:list={['col-end-2 col-start-1']}>
+    <Foods name="Pizza" price={10} />
+    <Foods name="Hamburguesa" price={5} />
+    <Foods name="Tacos" price={15} />
+  </Categories>
+  <Categories category="Cosas del mar">
+    <Foods name="Camarones" price={20} />
+  </Categories>
+</section>
