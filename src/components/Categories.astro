@@ -1,15 +1,16 @@
 ---
 interface Props {
   category: string;
-  ClassName?: string;
+  className?: string;
+  divClassName?: string;
 }
 
-const { category, className } = Astro.props
+const { category, className, divClassName } = Astro.props
 ---
 
 <section class={className}>
-  <h2 class="text-2xl font-semibold text-left">{category}</h2>
-  <div class="grid gap-y-2">
+  <h2 class="text-3xl font-semibold text-left font-rock-salt my-2 mb-4 ml-2 text-gray-900">{category}</h2>
+  <div class:list={["grid gap-y-2", divClassName]}>
     <slot />
   </div>
 </section>

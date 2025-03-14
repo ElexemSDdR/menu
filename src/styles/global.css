@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+@theme {
+  --font-rock-salt: 'Rock Salt';
+  --color-primary: #5B191D;
+  --color-secondary: #A93834;
+  --color-tertiary: #E57456;
+  --color-quaternary: #ffec73;
+  --color-next-quaternary: #DAA507;
+  --color-quinary: #FADD9E;
+  --color-senary: #ffe8c2;
+}
