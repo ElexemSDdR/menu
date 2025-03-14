@@ -1,12 +1,13 @@
 ---
 interface Props {
   category: string;
+  ClassName?: string;
 }
 
-const { category } = Astro.props
+const { category, className } = Astro.props
 ---
 
-<section>
+<section class={className}>
   <h2 class="text-2xl font-semibold text-left">{category}</h2>
   <div class="grid gap-y-2">
     <slot />
