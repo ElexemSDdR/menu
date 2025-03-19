@@ -15,11 +15,15 @@ const { price, name, className, isSpecial } = Astro.props
 >
   {name}
   <span 
-    class:list={["text-2xl font-bold rounded-full h-full text-center flex items-center justify-center px-6 py-4", isSpecial ? "bg-[#f3a505] text-gray-200" : "bg-tertiary"]}
+    class:list={["text-2xl font-bold rounded-full h-full text-center flex items-center justify-center px-6 py-4", isSpecial ? "bg-[#f3a505] relative text-gray-200" : "bg-tertiary"]}
   >
-    
-    ${
-      isSpecial ? Math.ceil(price / 2) : price
+    {
+      isSpecial ? <del class="absolute right-4 text-base rotate-12 top-0 text-gray-300">{price}</del> : null
     }
+    <strong style={ isSpecial ? "text-shadow: 0 0 7px #ffec73;" : null}> 
+      ${
+        isSpecial ? Math.ceil(price * 75/100) : price
+      }      
+    </strong>
   </span>
 </h3>

@@ -4,11 +4,22 @@ import Categories from '@components/Categories.astro'
 ---
 
 <section class="grid grid-cols-3 gap-x-8 gap-y-4 mx-auto border-3 bg-quinary border-next-quaternary rounded-lg px-8 py-4">
-  <Categories category="Principal" className="col-span-2" divClassName="grid gap-2 ">
-    <Foods name="Pizza a la italiana 🍕" price={11} className='col-span-2' isSpecial />
-    <Foods name="Hamburguesa mortal 🍔" price={25} />
-    <Foods name="Mega tacos gigantes 🌮" price={15} />
-  </Categories>
+  <div class="flex flex-col col-span-2">
+    <Categories category="Principal" className="row-span-1" divClassName="grid gap-2">
+      <Foods name="Pizza a la italiana 🍕" price={11} className='col-span-2' isSpecial />
+      <Foods name="Hamburguesa mortal 🍔" price={25} />
+      <Foods name="Mega tacos gigantes 🌮" price={15} />
+      <Foods name="Pollo al horno 🐔" price={20} />
+      <Foods name="Pizza sin TACC 🍕" price={5} />
+    </Categories>
+    <Categories category='Bebidas' className='col-span-2 row-end-2 row-start-2 mt-6'>
+      <Foods name="Coca Cola" price={13} />
+      <Foods name="Fanta" price={13} className=""/>	
+      <Foods name="Sprite" price={13} />
+      <Foods name="Cerveza Artesanal 🍺​" price={20} />
+      <Foods name="Sprite" price={13} />
+    </Categories>
+  </div>
   <div class="flex flex-col gap-y-6">
     <Categories category="Cosas del mar">
       <Foods name="Camarones 🦐" price={20} /> 
@@ -16,7 +27,7 @@ import Categories from '@components/Categories.astro'
     </Categories>    
     <Categories category="Acompañamientos" className="col-start-3 row-start-1">
       <Foods name="Ensalada Rusa 🥗" price={13} />
-      <Foods name="Ensalada rejuvenecedora de caderas 🥗" price={30} />	
+      <Foods name="Ensalada cuidadora de caderas 🥗" price={30}/>	
     </Categories>
   </div>
 </section>
