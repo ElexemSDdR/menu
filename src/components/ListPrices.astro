@@ -12,12 +12,11 @@ import Categories from '@components/Categories.astro'
       <Foods name="Pollo al horno 🐔" price={20} />
       <Foods name="Pizza sin TACC 🍕" price={5} />
     </Categories>
-    <Categories category='Bebidas' className='col-span-2 row-end-2 row-start-2 mt-6'>
-      <Foods name="Coca Cola" price={13} />
-      <Foods name="Fanta" price={13} className=""/>	
-      <Foods name="Sprite" price={13} />
+    <Categories category='Bebidas' className='col-span-2 row-end-2 row-start-2 mt-4' divClassName="grid grid-cols-2 gap-x-4">
+      <Foods name="Coca Cola 🥤" price={13} />
+      <Foods name="Fanta 🥤" price={13} className=""/>	
+      <Foods name="Sprite 🥤" price={13} />
       <Foods name="Cerveza Artesanal 🍺​" price={20} />
-      <Foods name="Sprite" price={13} />
     </Categories>
   </div>
   <div class="flex flex-col gap-y-6">
