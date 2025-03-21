@@ -9,7 +9,7 @@ const { category, className, divClassName } = Astro.props
 ---
 
 <section class={className}>
-  <h2 class="text-3xl font-semibold text-left font-rock-salt my-2 mb-4 ml-2 text-gray-900">{category}</h2>
+  <h2 class="text-3xl font-semibold text-left font-rock-salt my-2 mb-4 ml-2 text-gray-200">{category}</h2>
   <div class:list={["grid gap-y-2", divClassName]}>
     <slot />
   </div>
